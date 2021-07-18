@@ -1,1 +1,1 @@
-# thoughts-server
+# server-thoughts
