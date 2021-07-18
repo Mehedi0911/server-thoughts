@@ -14,6 +14,9 @@ app.use(express.json({limit:"30mb", extended: true}));
 app.use(express.urlencoded({limit:"30mb", extended: true}));
 
 app.use('/posts', postRoutes);
+app.get('/', (req, res) => {
+    res.send("Welcome to Thoughts API")
+})
 
 //  const CONNECTION_URL = 'mongodb+srv://mehedi91:Raaj_091@cluster0.3unof.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const CONNECTION_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.qkyg0.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
